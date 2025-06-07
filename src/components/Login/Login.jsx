@@ -44,7 +44,7 @@ export default function Login({ onLoginSuccess }) {
         <div className="frame"></div>
         <div className="welcome">
           <div className="elipse-login">
-            <img src={elipse} alt="elipse" />
+            <img className="elipse-img"src={elipse} alt="elipse" />
           </div>
           <h1 className="heading">Welcome to Starzen</h1>
           <p className="text-login">Sign in to connect with expert specialists</p>
