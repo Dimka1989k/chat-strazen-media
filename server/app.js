@@ -4,9 +4,11 @@ const Server = require('socket.io').Server
 const Connection = require('./db.js')
 const mongoose = require("mongoose")
 const Chat = require('./models/Chat.js')
-const { timeStamp } = require('console')
+
 
 require('dotenv').config();
+
+const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 
 const app = express()
 app.use(express.json())
@@ -66,7 +68,7 @@ server.listen("3002", () => {
 
 
 
-const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
+
 
 
 app.use(express.static('public'));
